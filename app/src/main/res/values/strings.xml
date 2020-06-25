@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Motion</string>
+    <string name="balance">Balance</string>
+    <string name="_400_12">$ 400.12</string>
+    <string name="_1290">**** 1290</string>
+    <string name="hi">Hi ✋</string>
+    <string name="peter_adam">Peter\nAdam</string>
+    <string name="university_of_tuit">University of TUIT</string>
+    <string name="for_adam">For Adam</string>
+    <string name="_8_july_2020">8 July 2020</string>
+</resources>

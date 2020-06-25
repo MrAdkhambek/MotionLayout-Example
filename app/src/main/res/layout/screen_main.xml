@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/screen_main_scene"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_card"
+        app:layout_constraintDimensionRatio="5:3"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineStart"
+        app:layout_constraintRight_toRightOf="@id/guidelineEnd"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/o"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_o"
+        app:layout_constraintBottom_toBottomOf="@id/line"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toRightOf="@id/line"
+        app:layout_constraintTop_toTopOf="@id/line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:fontFamily="@font/montserrat_light"
+        android:text="@string/hi"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/line"
+        app:layout_constraintTop_toTopOf="@id/line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/peter_adam"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/line"
+        app:layout_constraintTop_toBottomOf="@id/hi" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/line"
+        app:layout_constraintDimensionRatio="5:3"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineStart2"
+        app:layout_constraintRight_toRightOf="@id/guidelineEnd2"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/balanceImpl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/montserrat_light"
+        android:text="@string/balance"
+        android:textColor="#707070"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/card"
+        app:layout_constraintTop_toTopOf="@id/card" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/_400_12"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/balanceImpl" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/_1290"
+        android:textColor="#707070"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        app:layout_constraintLeft_toLeftOf="@id/card" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_undraw_pay"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toRightOf="@id/card"
+        app:layout_constraintTop_toTopOf="@id/card" />
+
+
+    <View
+        android:id="@+id/categories"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineStart"
+        app:layout_constraintRight_toRightOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@id/card" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/categoriesImpl"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        app:constraint_referenced_ids="category1,category2,category3,category4"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineStart"
+        app:layout_constraintRight_toRightOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@id/card" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/category1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_circle"
+        android:gravity="center"
+        android:text="🍳"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@id/categories"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/categories"
+        app:layout_constraintTop_toTopOf="@id/categories" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/category2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="#D5503E"
+        android:gravity="center"
+        android:text="🩺"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@id/categories"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/category1"
+        app:layout_constraintRight_toLeftOf="@id/category3"
+        app:layout_constraintTop_toTopOf="@id/categories" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/category3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="#55BCF3"
+        android:gravity="center"
+        android:text="🎮"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@id/categories"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/category2"
+        app:layout_constraintRight_toLeftOf="@id/category4"
+        app:layout_constraintTop_toTopOf="@id/categories" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/category4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="#F5C25D"
+        android:gravity="center"
+        android:text="🎓"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@id/categories"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/category3"
+        app:layout_constraintRight_toRightOf="@id/categories"
+        app:layout_constraintTop_toTopOf="@id/categories" />
+
+    <include
+        android:id="@+id/bottomSheet"
+        layout="@layout/layout_bottom_sheet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categories" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:motionInterpolator="easeInOut">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/bottomSheet" />
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_card"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@id/guidelineStart"
+            motion:layout_constraintRight_toRightOf="@id/guidelineEnd"
+            motion:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <Constraint
+            android:id="@+id/o"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:padding="16dp"
+            android:src="@drawable/ic_o"
+            motion:layout_constraintBottom_toBottomOf="@id/line"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintRight_toRightOf="@id/line"
+            motion:layout_constraintTop_toTopOf="@id/line" />
+
+        <Constraint
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:cardCornerRadius="12dp"
+            motion:layout_constraintBottom_toBottomOf="@id/line"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@id/guidelineStart2"
+            motion:layout_constraintRight_toRightOf="@id/guidelineEnd2"
+            motion:layout_constraintTop_toBottomOf="@id/line" />
+
+        <Constraint
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:elevation="2dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/_400_12"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            motion:layout_constraintLeft_toLeftOf="@id/card"
+            motion:layout_constraintTop_toBottomOf="@id/balanceImpl" />
+
+
+        <Constraint
+            android:id="@+id/category1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="🍳"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:alpha="1"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            motion:layout_constraintBottom_toBottomOf="@id/categories"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintLeft_toLeftOf="@id/categories"
+            motion:layout_constraintTop_toTopOf="@id/categories" />
+
+
+        <Constraint
+            android:id="@+id/category2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:textColor="@android:color/white"
+            android:alpha="1"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="🩺"
+            android:textSize="32sp"
+            motion:layout_constraintBottom_toBottomOf="@id/categories"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintLeft_toRightOf="@id/category1"
+            motion:layout_constraintRight_toLeftOf="@id/category3"
+            motion:layout_constraintTop_toTopOf="@id/categories" />
+
+
+        <Constraint
+            android:id="@+id/category3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:alpha="1"
+            android:background="@drawable/bg_circle"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="🎮"
+            android:textSize="32sp"
+            motion:layout_constraintBottom_toBottomOf="@id/categories"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintLeft_toRightOf="@id/category2"
+            motion:layout_constraintRight_toLeftOf="@id/category4"
+            motion:layout_constraintTop_toTopOf="@id/categories" />
+
+
+        <Constraint
+            android:id="@+id/category4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:textColor="@android:color/white"
+            android:alpha="1"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="🎓"
+            android:textSize="32sp"
+            motion:layout_constraintBottom_toBottomOf="@id/categories"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintLeft_toRightOf="@id/category3"
+            motion:layout_constraintRight_toRightOf="@id/categories"
+            motion:layout_constraintTop_toTopOf="@id/categories" />
+
+
+        <Constraint
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:background="#F5C25D"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/categories" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:background="@drawable/bg_card"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@id/guidelineStart"
+            motion:layout_constraintRight_toRightOf="@id/guidelineEnd"
+            motion:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <Constraint
+            android:id="@+id/o"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:padding="16dp"
+            android:src="@drawable/ic_o"
+            motion:layout_constraintBottom_toBottomOf="@id/line"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintRight_toRightOf="@id/line"
+            motion:layout_constraintTop_toTopOf="@id/line" />
+
+        <Constraint
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:cardCornerRadius="12dp"
+            motion:layout_constraintDimensionRatio="5:1"
+            motion:layout_constraintLeft_toLeftOf="@id/guidelineStart"
+            motion:layout_constraintRight_toRightOf="@id/guidelineEnd"
+            motion:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <Constraint
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/_400_12"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            motion:layout_constraintBottom_toBottomOf="@id/card"
+            motion:layout_constraintLeft_toLeftOf="@id/card"
+            motion:layout_constraintRight_toRightOf="@id/card"
+            motion:layout_constraintTop_toTopOf="@id/card" />
+
+
+        <Constraint
+            android:id="@+id/categoriesImpl"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0"
+            motion:layout_constraintTop_toBottomOf="@id/card" />
+
+        <Constraint
+            android:id="@+id/category1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:alpha="0"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="🍳"
+            android:textSize="32sp"
+            motion:layout_constraintBottom_toBottomOf="@id/categories"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintLeft_toLeftOf="@id/categories"
+            motion:layout_constraintTop_toTopOf="@id/categories" />
+
+        <Constraint
+            android:id="@+id/category2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:alpha="0"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="🩺"
+            android:textSize="32sp"
+            motion:layout_constraintBottom_toBottomOf="@id/categories"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintLeft_toRightOf="@id/category1"
+            motion:layout_constraintRight_toLeftOf="@id/category3"
+            motion:layout_constraintTop_toTopOf="@id/categories" />
+
+        <Constraint
+            android:id="@+id/category3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0"
+            android:alpha="0"
+            android:scaleY="0"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="🎮"
+            android:textSize="32sp"
+            motion:layout_constraintBottom_toBottomOf="@id/categories"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintLeft_toRightOf="@id/category2"
+            motion:layout_constraintRight_toLeftOf="@id/category4"
+            motion:layout_constraintTop_toTopOf="@id/categories" />
+
+        <Constraint
+            android:id="@+id/category4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:alpha="0"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="🎓"
+            android:textSize="32sp"
+            motion:layout_constraintBottom_toBottomOf="@id/categories"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintLeft_toRightOf="@id/category3"
+            motion:layout_constraintRight_toRightOf="@id/categories"
+            motion:layout_constraintTop_toTopOf="@id/categories" />
+
+        <Constraint
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:background="#F5C25D"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/card" />
+
+    </ConstraintSet>
+
+
+</MotionScene>
